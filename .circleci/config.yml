@@ -34,7 +34,7 @@ jobs:
           name: Deploy Master to Heroku
           command: |  # this command is framework-dependent and may vary
             heroku git:remote -a sapient-team-1
-            git push --force https://heroku:$ba0067de-4423-4f73-9df6-7d756fce16a3@git.heroku.com/$sapient-team-1.git HEAD:refs/heads/master
+            git push --force https://heroku:$ba0067de-4423-4f73-9df6-7d756fce16a3@git.heroku.com/sapient-team-1.git HEAD:refs/heads/master
             sleep 5  # sleep for 5 seconds to wait for dynos
             heroku restart
 workflows:
