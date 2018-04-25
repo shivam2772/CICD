@@ -31,7 +31,8 @@ jobs:
       - run : yarn test
       - run : yarn lint
       - run : yarn lintfix
-      - deployment:
+      - run :  
+      deployment:
           staging:
             branch: master
             heroku:
