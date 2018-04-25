@@ -25,6 +25,7 @@
     "mocha": "^2.2.5"
   },
   "scripts": {
+    "start": "./server/bin/www",
     "test": "mocha ./server/test/",
     "lint": "./node_modules/eslint/bin/eslint.js ./src/**/*.js",
     "build": "node ./server/bin/www",
