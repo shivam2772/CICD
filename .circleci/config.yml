@@ -21,7 +21,7 @@ jobs:
           - v1-dependencies-
 
       - run: yarn install
-
+      - run: docker ps -a
       - save_cache:
           paths:
             - node_modules
