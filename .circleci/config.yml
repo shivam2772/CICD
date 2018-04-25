@@ -30,6 +30,12 @@ jobs:
       - run : yarn test
       - run : yarn lint
       - run : yarn lintfix
+  deploy-job:
+    docker:
+      - image: circleci/node:7.10
+    working_directory: ~/repo
+    steps:
+      - checkout
       - run:
           name: Deploy Master to Heroku
           command: |  # this command is framework-dependent and may vary
@@ -38,13 +44,13 @@ jobs:
             sleep 5  # sleep for 5 seconds to wait for dynos
             heroku restart
 workflows:
-  version: 2
-  build-deploy:
-    jobs:
-      - build-job
-      - deploy-jobs:  # only deploy when master successfully builds
-          requires:
-            - build-job
-          filters:
-            branches:
-              only: master
+    version: 2
+    build-deploy:
+      jobs:
+        - build-job
+        - deploy-jobs:  # only deploy when master successfully builds
+            requires:
+              - build-job
+            filters:
+              branches:
+                only: master
