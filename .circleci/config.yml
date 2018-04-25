@@ -31,3 +31,8 @@ jobs:
       - run : yarn test
       - run : yarn lint
       - run : yarn lintfix
+        deployment:
+          staging:
+            branch: master
+            heroku:
+              appname: sapient-team-1
