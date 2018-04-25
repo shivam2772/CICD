@@ -30,7 +30,7 @@ jobs:
       - run : yarn test
       - run : yarn lint
       - run : yarn lintfix
-     - run:
+      - run:
           name: Deploy Master to Heroku
           command: |  # this command is framework-dependent and may vary
             heroku git:remote -a sapient-team-1
