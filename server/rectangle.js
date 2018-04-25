@@ -6,6 +6,7 @@ class Rectangle {
 
   get height() {
     return this._height;
+    console.log("Hey");
   }
 
   set height(value) {
