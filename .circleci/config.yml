@@ -31,4 +31,14 @@ jobs:
       - run : yarn test
       - run : yarn lint
       - run : yarn lintfix
-      - run : sudo docker-compose up --build
+      - run : 
+          name: Install Docker Compose
+          command: |
+            curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
+            chmod +x ~/docker-compose
+            sudo mv ~/docker-compose /usr/local/bin/docker-compose
+      - run:
+          name: Start container and verify it's working
+          command: |
+            set -x
+            docker-compose up
