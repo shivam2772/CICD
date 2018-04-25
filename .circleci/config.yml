@@ -29,5 +29,5 @@ jobs:
         
       # run tests!
       - run : yarn test
-      - run: yarn lint
-
+      - run : yarn lint
+      - run : yarn lintfix
