@@ -4,18 +4,28 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "babel-eslint": "^8.2.3",
-    "eslint": "^4.19.1"
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-react": "^7.7.0",
+    "babel": "^5.8.19",
+    "chai": "^3.2.0",
+    "isparta": "^3.0.4",
+    "istanbul": "^0.3.17",
+    "mocha": "^2.2.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha ./server/test/",
     "lint": "./node_modules/eslint/bin/eslint.js ./src/**/*.js",
+    "build": "node ./server/bin/www",
     "lintfix": "./node_modules/eslint/bin/eslint.js ./src/**/*.js --fix"
   },
   "repository": {

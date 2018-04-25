@@ -28,6 +28,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - name: Es lint
+      - run : yarn test
       - run: yarn lint
 
