@@ -3,7 +3,7 @@ general:
   branches:
     only:
       - master
-      - /Feature1 
+      - /Feature1-.*/
 jobs:
   build:
     docker:
