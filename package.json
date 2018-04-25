@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sinhaaayush01/TestingRepo.git"
+    "url": "git+https://github.com/sinhaaayush01/CICD.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sinhaaayush01/TestingRepo/issues"
+    "url": "https://github.com/sinhaaayush01/CICD/issues"
   },
-  "homepage": "https://github.com/sinhaaayush01/TestingRepo#readme"
+  "homepage": "https://github.com/sinhaaayush01/CICD#readme"
 }
